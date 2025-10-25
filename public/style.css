@@ -1,0 +1,52 @@
+/* Add styles here */
+
+/*
+"SERENE COAST" E-COMMERCE DESIGN SYSTEM
+- Body Font: 'Poppins' for clarity and modernity.
+- Heading Font: 'Playfair Display' for timeless elegance and brand character.
+- Colors: A calming, sophisticated palette of Dusty Teal, Seafoam Green, and Sandy Off-White.
+*/
+:root {
+    --bg-main: #f8f6f2;         /* Sandy Off-White */
+    --bg-secondary: #ffffff;
+    --text-dark: #4c5760;       /* Slate Blue-Gray */
+    --text-light: #8a949a;      /* Lighter Gray */
+    --brand-primary: #5a7d7c;   /* Dusty Teal */
+    --brand-accent: #b0c4b1;    /* Seafoam Green */
+    --border-color: #e8e3db;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(25px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in-section {
+    opacity: 0;
+    animation: fadeIn 0.8s ease-out forwards;
+    animation-timeline: view();
+    animation-range-start: entry 10%;
+    animation-range-end: entry 40%;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-dark);
+    font-weight: 400;
+}
+
+h1, h2, h3, h4, h5, h6, .font-serif {
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+}
+
+.theme-btn { background-color: var(--brand-primary); color: white; transition: all 0.3s ease; box-shadow: 0 4px 14px 0 rgb(0 0 0 / 8%); }
+.theme-btn:hover { background-color: var(--text-dark); transform: translateY(-3px); box-shadow: 0 6px 20px 0 rgb(0 0 0 / 12%); }
+.theme-btn-outline { background-color: transparent; color: var(--brand-primary); border: 1px solid var(--brand-primary); transition: all 0.3s ease; }
+.theme-btn-outline:hover { background-color: var(--brand-primary); color: white; transform: translateY(-3px); box-shadow: 0 6px 20px 0 rgb(0 0 0 / 12%); }
+
+.product-card { background-color: var(--bg-secondary); border: 1px solid var(--border-color); transition: transform 0.3s ease, box-shadow 0.3s ease; }
+.product-card:hover { transform: translateY(-8px); box-shadow: 0 15px 30px -5px rgb(0 0 0 / 0.1); }
+.product-card img { transition: transform 0.4s ease; }
+.product-card:hover img { transform: scale(1.05); }
